@@ -1,17 +1,182 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
+
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
-    <title>antirabstvo</title>
-  </head>
-  <body>
-    <noscript>
-      <strong>We're sorry but antirabstvo doesn't work properly without JavaScript enabled. Please enable it to continue.</strong>
-    </noscript>
-    <div id="app"></div>
-    <!-- built files will be auto injected -->
-  </body>
+
+    <title>Платформа карьерных консультантов "Антирабство"</title>
+
+    <style>
+        #preloader {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: #ffffff;
+        z-index: 99;
+        transition: 1s;
+        }
+
+        .preloader--hidden {
+            opacity: 0;
+        }
+    </style>
+</head>
+<body>
+
+<div class="preloader" id="preloader"></div>
+
+<script>(function () {
+    const preloader = document.getElementById('preloader');
+    document.addEventListener('DOMContentLoaded', function () {
+        preloader.classList.add('preloader--hidden');
+        setTimeout(function () {
+            preloader.style.zIndex = -99;
+        }, 1000);
+    });
+})();</script>
+
+<noscript><strong>We're sorry but antirabstvo doesn't work properly without JavaScript enabled. Please enable it to continue.</strong></noscript>
+
+<div id="app">
+    <header class="section section--padding-small site-header">
+        <div class="container">
+            <div class="row justify-content-between align-items-center">
+                <div class="col-2">
+                    <a href="/" class="logo">
+                        <img src="images/logo.png" class="logo__img">
+
+                        <span class="logo__text">Найдите свое призвание</span>
+                    </a>
+                </div>
+
+                <div class="col-8">
+                    <div class="sandwich site-header__sandwich">
+                        <div class="sandwich__item"></div>
+                        <div class="sandwich__item"></div>
+                        <div class="sandwich__item"></div>
+                    </div>
+
+                    <nav class="header-nav">
+                        <ul class="header-nav__list">
+                            <li class="header-nav__item header-nav__item--bg-seashell">
+                                <div class="header-nav__item-icon-container"><img class="header-nav__item-icon" src="images/phone.png" alt="Позвоните мне"></div>
+
+                                <a href="#" class="header-nav__link">Позвоните мне</a>
+                            </li>
+
+                            <li class="header-nav__item">
+                                <a href="#" class="header-nav__link">Каталог консультантов</a>
+                            </li>
+
+                            <li class="header-nav__item">
+                                <a href="#" class="header-nav__link">FAQ</a>
+                            </li>
+
+                            <li class="header-nav__item header-nav__item--bg-tuna">
+                                <a href="#" class="header-nav__link">Войти</a>
+                            </li>
+
+                            <li class="header-nav__item">
+                                <a href="#" class="header-nav__link">
+                                    <svg class="header-nav__svg" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 398.8 398.8" style="enable-background:new 0 0 398.8 398.8;" xml:space="preserve">
+<g>
+	<g>
+		<path d="M328.6,125.6c-0.8-9.6-4.8-18.4-11.2-24.8c-6.4-6.4-14.8-10.4-24.8-10.4h-21.2V72c0-20-8-38-21.2-50.8
+			C237,8,219,0,199.4,0c-20,0-38,8-50.8,21.2C135.4,34,127.4,52,127.4,72v18.4h-21.2c-10,0-18.4,4-24.8,10.4
+			C75,107.2,71,116,70.2,125.6L49,362.4c0,1.2,0,2.4,0,2.8c0,8.8,3.6,17.2,10,23.2c6,5.6,14,9.6,22.4,10.4h0.4c1.2,0,2.4,0,3.2,0
+			h228.8c0.8,0,2,0,3.2,0c8.8-0.8,16.8-4.8,22.8-10.4c6.4-6,10-14.4,10-23.6c0-0.8,0-1.6,0-2.8L328.6,125.6z M149.4,72
+			c0-14,5.6-26.4,14.8-35.6c9.2-9.2,21.6-14.8,35.6-14.8s26.4,5.6,35.6,14.8S250.2,58,250.2,72v18.4H149.4V72z M327.4,365.2
+			c0,3.2-1.2,6-3.6,8c-2.4,2.4-6,4-9.2,4.4c0,0-0.4,0-1.2,0H85c-0.8,0-1.2,0-1.2,0h-0.4c-3.6-0.4-6.8-2-9.2-4.4
+			c-2.4-2-3.6-4.8-3.6-8V364l21.2-236.4c0.4-4.4,2.4-8.4,5.2-11.2c2.4-2.4,5.6-4,9.2-4h21.2v48.8c0,6,4.8,10.8,10.8,10.8
+			s10.8-4.8,10.8-10.8v-48.8h100v48.8c0,6,4.8,10.8,10.8,10.8s10.8-4.8,10.8-10.8v-48.8h21.2c3.6,0,6.8,1.6,9.2,4
+			c2.8,2.8,4.8,6.8,5.2,11.2l21.2,236.8V365.2z"/>
+	</g>
+</g>
+</svg>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="section section--bg-seashell section--padding-big services">
+        <div class="container">
+            <div class="row flex-column flex-xl-row-reverse justify-content-center justify-content-xl-between align-items-center align-items-xl-start">
+                <div class="col-12 col-xl-5">
+                    <div class="services__img-container">
+                        <img src="images/screen4-image.jpg" alt="" class="services__img">
+                    </div>
+                </div>
+
+                <div class="col-12 col-xl-7">
+                    <div class="services__title">
+                        <h1 class="section__h1">Сервисы трудоустройства</h1>
+
+                        <h2 class="section__h2">лучшие инструменты для поиска работы!</h2>
+                    </div>
+
+                    <ul class="services__list">
+                        <li class="services__item">
+                            <div class="services__item-number">01</div>
+                            
+                            <div class="services__item-icon"><img src="images/formula-icon.png" alt="Формула успешного собеседования"></div>
+
+                            <div class="services__item-text">
+                                <span>Формула успешного собеседования</span>
+
+                                <span><br>сервис подготовки к переговорам всего за 24 часа</span>
+                            </div>
+                        </li>
+
+                        <li class="services__item">
+                            <div class="services__item-number">02</div>
+
+                            <div class="services__item-icon"><img src="images/rassilka-icon.png" alt="Рассылка вашего резюме по базе HR-специалистов"></div>
+
+                            <div class="services__item-text">
+                                <span>Рассылка вашего резюме по базе HR-специалистов</span>
+
+                                <span><br>более 2000+ человек, заинтересованных в вашем профессионализме</span>
+                            </div>
+                        </li>
+
+                        <li class="services__item">
+                            <div class="services__item-number">03</div>
+
+                            <div class="services__item-icon"><img src="images/sobesedovanie-icon.png" alt="Персональное представление в компании"></div>
+
+                            <div class="services__item-text">
+                                <span>Персональное представление в компании</span>
+
+                                <span><br>по выбору кандидата - устройтесь в компанию мечты</span>
+                            </div>
+                        </li>
+
+                        <li class="services__item">
+                            <div class="services__item-number">04</div>
+
+                            <div class="services__item-icon"><img src="images/rezume-like-icon.png" alt="Публикация на витрине кандидатов"></div>
+
+                            <div class="services__item-text">
+                                <span>Публикация на витрине кандидатов</span>
+
+                                <span><br>площадка с аудиторией 160000+ потенциальных работодателей</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+</body>
 </html>

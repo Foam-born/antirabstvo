@@ -1,0 +1,30 @@
+@require '../../common/styles/global-variables.styl'
+
+.section
+
+  &--padding-small
+    padding: $default-offset 0
+
+  &--padding-big
+    padding: $default-offset * 6 0
+
+  &--bg-seashell
+    background-color: $seashell
+
+  &__h1
+    position: relative
+    display: inline-block
+    font-size: 42px
+    font-weight: bold
+    &::after
+      position: absolute
+      left: calc(100% + 10px)
+      bottom: 20px
+      content: ''
+      display: inline-block
+      height: 4px
+      width: 30px
+      background-color: $main-shaft
+
+  &__h2
+    font-size: 20px

@@ -1,0 +1,87 @@
+@require '../../common/styles/global-variables.styl'
+
+.services
+
+  &__list
+    display: flex
+    flex-direction: column
+    list-style-type: none
+
+  &__item
+    margin-top: $default-offset * 3
+    display: flex
+    align-items: center
+
+  &__item-number
+    margin-right: $default-offset * .7
+    align-self: flex-start
+    color: $iron
+    font-weight: bold
+
+  &__item-icon
+    margin-right: $default-offset * 3
+    position: relative
+    display: flex
+    justify-content: center
+    align-items: center
+    padding: $default-offset * .5 $default-offset
+    min-width: 90px
+    size(90px)
+    border-radius: 5px
+    box-shadow: 0 2px 7px rgba(0,0,0,.2)
+    img
+      max-height: 70px
+      max-width: 100%
+      width: auto
+
+  &__item-text
+    max-width: 470px
+    font-size: 15px
+    line-height: 18px
+    letter-spacing: .5px
+    span:first-child
+      margin-right: $default-offset * 1.5
+      position: relative
+      font-weight: 500
+      cursor: pointer
+      &::after
+        position: absolute
+        left: calc(100% + 5px)
+        bottom: 8px
+        content: ''
+        display: inline-block
+        height: 2px
+        width: 15px
+        background-color: $main-shaft
+      &::before
+        position: absolute
+        bottom: 0
+        left: 0
+        content:''
+        display: inline-block
+        height: 2px
+        width: 0
+        background-color: $main-shaft
+        transition: .3s
+      &:hover
+        &::before
+          width: 100%
+
+  &__img-container
+    position: absolute
+    left: calc(100% - 480px)
+    opacity: .2
+    margin: 0 auto $default-offset * 4
+    display: flex
+    justify-content: center
+    align-items: center
+    size(480px)
+    border-radius: 50%
+    box-shadow: 0 2px 7px rgba(0,0,0,.2)
+    overflow: hidden
+    @media(min-width: $extra-large)
+      position: static
+      opacity: 1
+    img
+      min-height: 480px
+      width: auto

@@ -1,0 +1,55 @@
+@require '../../common/styles/global-variables.styl'
+
+.header-nav
+
+  &__list
+    height: 30px
+    display: none
+    flex-direction: row
+    justify-content: flex-end
+    align-items: center
+    list-style-type: none
+    @media(min-width: $extra-large)
+      display: flex
+
+  &__item
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    align-items: center
+
+    &--bg-seashell
+      background-color: $seashell
+      border-radius: 19px
+
+    &--bg-tuna
+      background-color: $main-shaft
+      border-radius: 19px
+      .header-nav__link
+        color: $white
+
+  &__link
+    padding: $default-offset * .5 $default-offset * 1.5
+    text-transform: uppercase
+    color: $gray
+    font-weight: 500
+    font-size: 14px
+    letter-spacing: .5px
+
+  &__item-icon-container
+    margin: 1.5px 0 2px 2.5px
+    display: flex
+    justify-content: center
+    align-items: center
+    size(30px)
+    background-color: $white
+    border-radius: 50%
+
+  &__item-icon
+    display: block
+    size(70%)
+
+  &__svg
+    width: 25px
+    height: auto
+    fill: $gray

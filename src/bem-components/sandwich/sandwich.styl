@@ -1,0 +1,32 @@
+@require '../../common/styles/global-variables.styl'
+
+.sandwich
+  float: right
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  size(40px, 23px)
+  cursor: pointer
+  transition: .3s
+  @media(min-width: $extra-large)
+    display: none
+  &:hover
+    .sandwich__item
+      box-shadow: 0 2px 7px alpha($red, .1)
+
+  &__item
+    display: block
+    width: 38px
+    height: 5px
+    background-color: $red
+    border-radius: 2px
+    transition: .3s
+
+  &--opened &__item:first-child
+    display: none
+
+  &--opened &__item:nth-child(2)
+    transform: translateY(13px) rotate(45deg)
+
+  &--opened &__item:last-child
+    transform: translateY(-20px) rotate(-45deg)
