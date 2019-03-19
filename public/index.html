@@ -11,14 +11,14 @@
 
     <style>
         #preloader {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 100vh;
-        background-color: #ffffff;
-        z-index: 99;
-        transition: 1s;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: #ffffff;
+            z-index: 99;
+            transition: 1s;
         }
 
         .preloader--hidden {
@@ -30,6 +30,22 @@
 
 <div class="preloader" id="preloader"></div>
 
+<div class="popup popup--phone-call">
+    <form class="popup__form">
+        <h2 class="popup__form-title">Введите свой номер телефона - и мы Вам перезвоним!</h2>
+
+        <label class="popup__label">
+            <span class="popup__input-descr">Телефон:</span>
+
+            <input type="tel" name="userTel" required placeholder="Формат: XXXXXXXXXX" class="popup__input">
+        </label>
+
+        <div class="popup__button button button--bg-red">
+            <a class="button__link" href="#">Перезвоните мне</a>
+        </div>
+    </form>
+</div>
+
 <script>(function () {
     const preloader = document.getElementById('preloader');
     document.addEventListener('DOMContentLoaded', function () {
@@ -40,13 +56,14 @@
     });
 })();</script>
 
-<noscript><strong>We're sorry but antirabstvo doesn't work properly without JavaScript enabled. Please enable it to continue.</strong></noscript>
+<noscript><strong>We're sorry but antirabstvo doesn't work properly without JavaScript enabled. Please enable it to
+    continue.</strong></noscript>
 
-<div id="app">
+<div id="app" class="full-page-container">
     <header class="section section--padding-small site-header">
         <div class="container">
             <div class="row justify-content-between align-items-center">
-                <div class="col-2">
+                <div class="col-6 col-xl-2">
                     <a href="/" class="logo">
                         <img src="images/logo.png" class="logo__img">
 
@@ -54,7 +71,7 @@
                     </a>
                 </div>
 
-                <div class="col-8">
+                <div class="col-4 col-xl-9">
                     <div class="sandwich site-header__sandwich">
                         <div class="sandwich__item"></div>
                         <div class="sandwich__item"></div>
@@ -63,10 +80,12 @@
 
                     <nav class="header-nav">
                         <ul class="header-nav__list">
-                            <li class="header-nav__item header-nav__item--bg-seashell">
-                                <div class="header-nav__item-icon-container"><img class="header-nav__item-icon" src="images/phone.png" alt="Позвоните мне"></div>
+                            <li class="header-nav__item header-nav__item button button--bg-seashell phone-button">
+                                <div class="header-nav__item-icon-container"><img class="header-nav__item-icon"
+                                                                                  src="images/phone.png"
+                                                                                  alt="Позвоните мне"></div>
 
-                                <a href="#" class="header-nav__link">Позвоните мне</a>
+                                <a href="#" class="header-nav__link button__link">Позвоните мне</a>
                             </li>
 
                             <li class="header-nav__item">
@@ -77,13 +96,17 @@
                                 <a href="#" class="header-nav__link">FAQ</a>
                             </li>
 
-                            <li class="header-nav__item header-nav__item--bg-tuna">
-                                <a href="#" class="header-nav__link">Войти</a>
+                            <li class="header-nav__item button button--bg-main-shaft">
+                                <div class="button__anim-helper"></div>
+
+                                <a href="#" class="header-nav__link button__link">Войти</a>
                             </li>
 
                             <li class="header-nav__item">
                                 <a href="#" class="header-nav__link">
-                                    <svg class="header-nav__svg" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 398.8 398.8" style="enable-background:new 0 0 398.8 398.8;" xml:space="preserve">
+                                    <svg class="header-nav__svg" version="1.1" id="Capa_1"
+                                         xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 398.8 398.8"
+                                         style="enable-background:new 0 0 398.8 398.8;" xml:space="preserve">
 <g>
 	<g>
 		<path d="M328.6,125.6c-0.8-9.6-4.8-18.4-11.2-24.8c-6.4-6.4-14.8-10.4-24.8-10.4h-21.2V72c0-20-8-38-21.2-50.8
@@ -110,13 +133,13 @@
     <section class="section section--bg-seashell section--padding-big services">
         <div class="container">
             <div class="row flex-column flex-xl-row-reverse justify-content-center justify-content-xl-between align-items-center align-items-xl-start">
-                <div class="col-12 col-xl-5">
+                <div class="col-12 col-xl-6">
                     <div class="services__img-container">
                         <img src="images/screen4-image.jpg" alt="" class="services__img">
                     </div>
                 </div>
 
-                <div class="col-12 col-xl-7">
+                <div class="col-12 col-xl-6">
                     <div class="services__title">
                         <h1 class="section__h1">Сервисы трудоустройства</h1>
 
@@ -125,9 +148,12 @@
 
                     <ul class="services__list">
                         <li class="services__item">
-                            <div class="services__item-number">01</div>
-                            
-                            <div class="services__item-icon"><img src="images/formula-icon.png" alt="Формула успешного собеседования"></div>
+                            <div class="services__item-icon-number-container">
+                                <div class="services__item-number">01</div>
+
+                                <div class="services__item-icon"><img src="images/formula-icon.png"
+                                                                      alt="Формула успешного собеседования"></div>
+                            </div>
 
                             <div class="services__item-text">
                                 <span>Формула успешного собеседования</span>
@@ -137,9 +163,13 @@
                         </li>
 
                         <li class="services__item">
-                            <div class="services__item-number">02</div>
+                            <div class="services__item-icon-number-container">
+                                <div class="services__item-number">02</div>
 
-                            <div class="services__item-icon"><img src="images/rassilka-icon.png" alt="Рассылка вашего резюме по базе HR-специалистов"></div>
+                                <div class="services__item-icon"><img src="images/rassilka-icon.png"
+                                                                      alt="Рассылка вашего резюме по базе HR-специалистов">
+                                </div>
+                            </div>
 
                             <div class="services__item-text">
                                 <span>Рассылка вашего резюме по базе HR-специалистов</span>
@@ -149,9 +179,12 @@
                         </li>
 
                         <li class="services__item">
-                            <div class="services__item-number">03</div>
+                            <div class="services__item-icon-number-container">
+                                <div class="services__item-number">03</div>
 
-                            <div class="services__item-icon"><img src="images/sobesedovanie-icon.png" alt="Персональное представление в компании"></div>
+                                <div class="services__item-icon"><img src="images/sobesedovanie-icon.png"
+                                                                      alt="Персональное представление в компании"></div>
+                            </div>
 
                             <div class="services__item-text">
                                 <span>Персональное представление в компании</span>
@@ -161,9 +194,12 @@
                         </li>
 
                         <li class="services__item">
-                            <div class="services__item-number">04</div>
+                            <div class="services__item-icon-number-container">
+                                <div class="services__item-number">04</div>
 
-                            <div class="services__item-icon"><img src="images/rezume-like-icon.png" alt="Публикация на витрине кандидатов"></div>
+                                <div class="services__item-icon"><img src="images/rezume-like-icon.png"
+                                                                      alt="Публикация на витрине кандидатов"></div>
+                            </div>
 
                             <div class="services__item-text">
                                 <span>Публикация на витрине кандидатов</span>

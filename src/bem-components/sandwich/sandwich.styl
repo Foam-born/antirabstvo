@@ -7,7 +7,9 @@
   justify-content: space-between
   size(40px, 23px)
   cursor: pointer
+  transform: translateY(-1px)
   transition: .3s
+
   @media(min-width: $extra-large)
     display: none
   &:hover
@@ -26,7 +28,7 @@
     display: none
 
   &--opened &__item:nth-child(2)
-    transform: translateY(13px) rotate(45deg)
+    transform: translateY(5px) rotate(45deg)
 
   &--opened &__item:last-child
-    transform: translateY(-20px) rotate(-45deg)
+    transform: translateY(-13px) rotate(-45deg)

@@ -1,0 +1,51 @@
+@require '../../common/styles/global-variables.styl'
+
+.button
+  position: relative
+  display: inline-flex
+  flex-direction: row
+  justify-content: center
+  align-items: center
+  overflow: hidden
+  border-radius: 19px
+  color: $gray
+  transition: .3s
+
+  &__link
+    text-transform: uppercase
+    color: $gray
+    font-weight: 500
+    font-size: 14px
+    letter-spacing: .5px
+    z-index: 1
+
+  &__anim-helper
+    position: absolute
+    top: 0
+    left: -10px
+    display: block
+    width: 0
+    height: 100%
+    transition: .3s
+
+  &--bg-red
+    background-color: $red
+    .button__link
+      color: $white
+
+
+  &--bg-seashell
+    color: $gray
+    background-color: $seashell
+    &:hover
+      box-shadow: 0 2px 7px rgba(0,0,0,.2)
+
+  &--bg-main-shaft
+    color: $white
+    background-color: $main-shaft
+    &:hover
+      .button__anim-helper
+        width: 120%
+        background-color: $red
+    .button__link
+      color: $white

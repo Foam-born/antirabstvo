@@ -1,6 +1,12 @@
 @require '../../common/styles/global-variables.styl'
 
 .site-header
-  position relative
+  position: sticky
+  top: 0
+  z-index: 3
+  background-color: $white
   box-shadow: 0 0 10px 0 rgba(0,0,0,0.2)
+
+  .col-8
+    position: static
 
