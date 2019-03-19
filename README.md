@@ -1,5 +1,7 @@
 # antirabstvo
 
+Тестовое задание для компании "Антирабство".
+
 ## Project setup
 ```
 npm install
@@ -10,20 +12,9 @@ npm install
 npm run serve
 ```
 
-### Compiles and minifies for production
+### Compiles,  minifies for production and run server
 ```
+npm i -g serve
 npm run build
+serve -s dist
 ```
-
-### Run your tests
-```
-npm run test
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).

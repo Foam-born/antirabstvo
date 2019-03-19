@@ -16,14 +16,13 @@
     z-index: 2
     size(100vw, 100vh)
     .header-nav__list
-      padding-top: $default-offset * 8
+      padding-top: 5%
       size(100%)
       flex-direction: column
       background-color: $white
       justify-content: flex-start
     .header-nav__item
       margin-bottom: $default-offset
-
 
   &__list
     height: 30px
@@ -41,6 +40,24 @@
     font-size: 14px
     letter-spacing: .5px
     z-index: 1
+
+    &--menu-link
+      margin: 0 $default-offset * 1.5
+      position: relative
+      padding: 0
+      &::before
+        position: absolute
+        bottom: 0
+        left: 0
+        content:''
+        display: inline-block
+        height: 2px
+        width: 0
+        background-color: $main-shaft
+        transition: .3s
+      &:hover
+        &::before
+          width: 100%
 
   &__item-icon-container
     margin: 1.5px 0 2px 2.5px
