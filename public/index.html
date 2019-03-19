@@ -31,19 +31,45 @@
 <div class="preloader" id="preloader"></div>
 
 <div class="popup popup--phone-call">
-    <form class="popup__form">
-        <h2 class="popup__form-title">Введите свой номер телефона - и мы Вам перезвоним!</h2>
+    <div class="popup__bg"></div>
 
-        <label class="popup__label">
-            <span class="popup__input-descr">Телефон:</span>
+    <div class="popup__content">
+        <form class="popup__form">
+            <h2 class="popup__form-title">Введите свой номер телефона - и мы Вам перезвоним!</h2>
 
-            <input type="tel" name="userTel" required placeholder="Формат: XXXXXXXXXX" class="popup__input">
-        </label>
+            <label class="popup__label">
+                <span class="popup__input-descr">Телефон:</span>
 
-        <div class="popup__button button button--bg-red">
-            <a class="button__link" href="#">Перезвоните мне</a>
-        </div>
-    </form>
+                <input id="phone" type="tel" name="phone" required placeholder="Формат: (XXX) XXX XX XX" class="popup__input">
+            </label>
+
+            <button class="popup__button button button--bg-red">Перезвоните мне</button>
+        </form>
+    </div>
+</div>
+
+<div class="popup popup--login">
+    <div class="popup__bg"></div>
+
+    <div class="popup__content">
+        <form class="popup__form">
+            <h2 class="popup__form-title">Вход</h2>
+
+            <label class="popup__label">
+                <span class="popup__input-descr">E-mail адрес:</span>
+
+                <input id="email" type="email" name="email" required class="popup__input">
+            </label>
+
+            <label class="popup__label">
+                <span class="popup__input-descr">Пароль:</span>
+
+                <input id="password" type="text" name="password" required class="popup__input">
+            </label>
+
+            <button class="popup__button button button--bg-red">Войти</button>
+        </form>
+    </div>
 </div>
 
 <script>(function () {

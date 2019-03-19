@@ -6,13 +6,23 @@
   top: 0
   left: 0
   z-index: 4
-  justify-content: center
-  align-items: center
   size(100%)
-  background-color: alpha($main-shaft, 0.8)
 
   &--opened
-    display: flex
+    display: block
+
+  &__bg
+    position: absolute
+    top: 0
+    left: 0
+    size(100%)
+    background-color: alpha($main-shaft, 0.8)
+
+  &__content
+    position: relative
+    top: 150px
+    margin: auto
+    size(80%, auto)
 
   &__form
     margin auto
@@ -20,7 +30,6 @@
     flex-direction: column
     justify-content: center
     align-items: center
-    size(80%, auto)
     padding: $default-offset * 4 $default-offset * 2
     background-color: $white
     border-radius: 25px

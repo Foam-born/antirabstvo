@@ -20,4 +20,8 @@ $(document).ready(function () {
     $(document).on(EVENTS.CUSTOM.SANDWICH.CLOSED, function () {
         $block.removeClass(mods.hidden);
     });
+
+    $(document).on(EVENTS.CUSTOM.PHONE_POPUP.OPENED, function () {
+        $block.addClass(mods.hidden);
+    });
 });

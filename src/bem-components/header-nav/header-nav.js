@@ -19,8 +19,7 @@ const mods = {
 };
 
 $(document).ready(function () {
-    const $block = $('.' + block),
-          $list = $block.find('.' + elems.list);
+    const $block = $('.' + block);
 
     $(document).on(EVENTS.CUSTOM.SANDWICH.OPENED, function () {
         openMenu($block);

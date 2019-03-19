@@ -21,6 +21,9 @@ module.exports = {
         POPUP_MENU: {
             CLOSED: 'popup-menu-closed'
         },
-        BUY_TICKET: 'buy-ticket'
+        PHONE_POPUP: {
+            OPENED: 'phone-popup-opened',
+            CLOSED: 'phone-popup-closed'
+        }
     }
 };

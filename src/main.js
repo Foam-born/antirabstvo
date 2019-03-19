@@ -3,6 +3,7 @@
 // vendor
 import Vue from 'vue/dist/vue'
 import 'bootstrap/dist/css/bootstrap.css'
+import 'jquery-input-mask-phone-number/dist/jquery-input-mask-phone-number.min'
 import 'slick-carousel/slick/slick.css'
 import AOS from 'aos/dist/aos.js'
 import 'aos/dist/aos.css'
@@ -19,6 +20,8 @@ import './common/styles/global-variables.styl'
 import './common/styles/style.styl'
 import './common/styles/mixins.styl'
 import './common/styles/effects.styl'
+
+import './common/scripts/helpers/input-mask'
 
 // bem components
 import './bem-components/full-page-container/full-page-container.styl'
