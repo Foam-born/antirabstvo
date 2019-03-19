@@ -30,7 +30,7 @@
 
 <div class="preloader" id="preloader"></div>
 
-<div class="popup popup--phone-call">
+<div class="popup popup--phone">
     <div class="popup__bg"></div>
 
     <div class="popup__content">
@@ -40,7 +40,7 @@
             <label class="popup__label">
                 <span class="popup__input-descr">Телефон:</span>
 
-                <input id="phone" type="tel" name="phone" required placeholder="Формат: (XXX) XXX XX XX" class="popup__input">
+                <input autocomplete="off" pattern="\(\d{3}\)\s\d{3}-\d{4}" id="phone" type="tel" name="phone" required placeholder="Формат: (XXX) XXX XX XX" class="popup__input">
             </label>
 
             <button class="popup__button button button--bg-red">Перезвоните мне</button>
@@ -58,13 +58,13 @@
             <label class="popup__label">
                 <span class="popup__input-descr">E-mail адрес:</span>
 
-                <input id="email" type="email" name="email" required class="popup__input">
+                <input type="email" name="email" required class="popup__input">
             </label>
 
             <label class="popup__label">
                 <span class="popup__input-descr">Пароль:</span>
 
-                <input id="password" type="text" name="password" required class="popup__input">
+                <input type="password" name="password" required class="popup__input">
             </label>
 
             <button class="popup__button button button--bg-red">Войти</button>
@@ -122,7 +122,7 @@
                                 <a href="#" class="header-nav__link">FAQ</a>
                             </li>
 
-                            <li class="header-nav__item button button--bg-main-shaft">
+                            <li class="header-nav__item button button--bg-main-shaft login-button">
                                 <div class="button__anim-helper"></div>
 
                                 <a href="#" class="header-nav__link button__link">Войти</a>

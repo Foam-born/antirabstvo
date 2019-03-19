@@ -24,6 +24,10 @@ module.exports = {
         PHONE_POPUP: {
             OPENED: 'phone-popup-opened',
             CLOSED: 'phone-popup-closed'
+        },
+        LOGIN_POPUP: {
+            OPENED: 'login-popup-opened',
+            CLOSED: 'login-popup-closed'
         }
     }
 };

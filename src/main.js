@@ -21,8 +21,6 @@ import './common/styles/style.styl'
 import './common/styles/mixins.styl'
 import './common/styles/effects.styl'
 
-import './common/scripts/helpers/input-mask'
-
 // bem components
 import './bem-components/full-page-container/full-page-container.styl'
 import './bem-components/full-page-container/full-page-container.js'
@@ -34,8 +32,9 @@ import './bem-components/button/button.styl'
 import './bem-components/popup/popup.styl'
 import './bem-components/popup/popup.js'
 
-import './bem-components/phone-button/phone-button.styl'
 import './bem-components/phone-button/phone-button.js'
+
+import './bem-components/login-button/login-button.js'
 
 import './bem-components/site-header/site-header.styl'
 

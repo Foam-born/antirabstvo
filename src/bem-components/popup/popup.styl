@@ -37,9 +37,12 @@
   &__form-title
     margin-bottom: $default-offset * 3
     text-align: center
+    font-size: 22px
+    @media(min-width: $small)
+      font-size: 32px
 
   &__label
-    margin auto
+    margin 0 auto $default-offset * 1.5
     max-width: 270px
     position: relative
     width: 100%
@@ -66,7 +69,11 @@
     margin-top: $default-offset * 2
     padding: $default-offset 0
     border-radius: 32px
-    width: 270px
+    width: 100%
+    max-width: 270px
+    @media(min-width: $small)
+      width: 270px
 
-  &--phone-call
+
+  &--phone
     overflow-y hidden

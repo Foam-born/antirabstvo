@@ -24,4 +24,16 @@ $(document).ready(function () {
     $(document).on(EVENTS.CUSTOM.PHONE_POPUP.OPENED, function () {
         $block.addClass(mods.hidden);
     });
+
+    $(document).on(EVENTS.CUSTOM.PHONE_POPUP.CLOSED, function () {
+        $block.removeClass(mods.hidden);
+    });
+
+    $(document).on(EVENTS.CUSTOM.LOGIN_POPUP.OPENED, function () {
+        $block.addClass(mods.hidden);
+    });
+
+    $(document).on(EVENTS.CUSTOM.LOGIN_POPUP.CLOSED, function () {
+        $block.removeClass(mods.hidden);
+    });
 });

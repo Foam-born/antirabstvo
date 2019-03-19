@@ -1,7 +1,5 @@
 'use strict';
 
-import {menuIsOpen} from "../header-nav/header-nav";
-
 const EVENTS = require('./../../common/scripts/constants/EVENTS');
 
 const block = 'popup';
@@ -12,20 +10,44 @@ const elems = {
 };
 
 const mods = {
-  phonePopup: block + '--phone-call',
+  phonePopup: block + '--phone',
+  loginPopup: block + '--login',
   opened: block + '--opened'
 };
 
 $(document).ready(function () {
   const $block = $('.' + block),
         $phonePopup = $('.' + mods.phonePopup),
+        $loginPopup = $('.' + mods.loginPopup),
         $bg = $block.find('.' + elems.bg);
 
+  $('#phone').usPhoneFormat({
+    format: '(xxx) xxx-xxxx',
+  });
+
   $bg.on(EVENTS.ELEMENT.CLICK, function () {
-    $phonePopup.removeClass(mods.opened);
+    closePopup($phonePopup);
+    closePopup($loginPopup);
+
+    $(document).trigger(EVENTS.CUSTOM.PHONE_POPUP.CLOSED);
+    $(document).trigger(EVENTS.CUSTOM.LOGIN_POPUP.CLOSED);
   });
 
   $(document).on(EVENTS.CUSTOM.PHONE_POPUP.OPENED, function () {
-    $phonePopup.addClass(mods.opened);
+    openPopup($phonePopup);
+  });
+
+  $(document).on(EVENTS.CUSTOM.LOGIN_POPUP.OPENED, function () {
+    openPopup($loginPopup);
   });
 });
+
+
+
+function openPopup($block) {
+  $block.addClass(mods.opened);
+}
+
+function closePopup($block) {
+  $block.removeClass(mods.opened);
+}
